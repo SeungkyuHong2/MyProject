@@ -21,7 +21,7 @@ output_length_2 = 12                   # MOL(0~5.5, step:0.5)
 h1 = 50                                # 히든레이어1 노드 수
 h2 = 50                                # 히든레이어2 노드 수
 h3 = 50                                # 히든레이어3 노드 수
-EPOCHS = 10                            # 반복 횟수
+EPOCHS = 5                            # 반복 횟수
 
 genomes = []
 for _ in range(N_POPULATION):
@@ -167,19 +167,4 @@ while n_gen <= EPOCHS:
     n_gen += 1
     
     
-import matplotlib.pyplot as plt
 
-# Score Graph
-score_history = np.array(score_history)
-high_score_history = np.array(high_score_history)
-mean_score_history = np.array(mean_score_history)
-
-plt.plot(score_history[:,0], score_history[:,1], '-o', label='BEST')
-plt.plot(high_score_history[:,0], high_score_history[:,1], '-o', label='High')
-plt.plot(mean_score_history[:,0], mean_score_history[:,1], '-o', label='Mean')
-plt.legend()
-plt.xlim(0, EPOCHS)
-plt.ylim(bottom=0)
-plt.xlabel('Epochs')
-plt.ylabel('Score')
-plt.show()
