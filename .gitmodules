@@ -1,0 +1,3 @@
+[submodule "structuralOCR_2021"]
+	path = structuralOCR_2021
+	url = ssh://ghdtmdrb234@bigbase.seoultech.ac.kr:29418/capstone/structuralOCR_2021.git
